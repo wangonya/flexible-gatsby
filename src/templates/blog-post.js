@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import DefaultLayout from '../components/Layout'
+import DefaultLayout from '../components/layout'
 import SEO from '../components/seo'
 
 class BlogPostTemplate extends React.Component {
