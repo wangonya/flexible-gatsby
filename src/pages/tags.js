@@ -11,12 +11,12 @@ const TagsPage = ({ data }) => {
 
   return (
     <Layout>
-      <div>
+      <div className="blog-tags">
         <h1>Tags</h1>
-        <ul>
+        <ul className="tags">
           {allTags.map(tag => (
             <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="tag">
                 {tag.fieldValue} ({tag.totalCount})
               </Link>
             </li>
