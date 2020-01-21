@@ -48,3 +48,29 @@
     }
   }
 }
+
+.page-tag {
+  span {
+    a {
+      text-decoration: none;
+      color: $dark-blue;
+      &:hover {
+        text-decoration: underline;
+        opacity: .8;
+      }
+    }
+  }
+}
+
+.blog-tags {
+  span {
+    a {
+      text-decoration: none;
+      color: $dark-blue;
+      &:hover {
+        text-decoration: underline;
+        opacity: .8;
+      }
+    }
+  }
+}

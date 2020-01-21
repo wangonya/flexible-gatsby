@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { kebabCase } from 'lodash';
 import Img from 'gatsby-image'
 
 import DefaultLayout from '../components/layout'
@@ -38,8 +39,8 @@ class BlogPostTemplate extends React.Component {
                 <div className="page-tag">
                   {post.frontmatter.tags &&
                     post.frontmatter.tags.map(tag => (
-                      <span className="tag" key={tag}>
-                        # {tag}
+                      <span key={tag}>
+                        <Link  className="tag" to={`/tags/${kebabCase(tag)}/`}># {tag}</Link>
                       </span>
                     ))}
                 </div>
