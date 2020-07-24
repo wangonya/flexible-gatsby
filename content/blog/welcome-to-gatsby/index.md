@@ -17,6 +17,8 @@ console.log('Hello, World!')
 
 And also LaTeX functions using the [KaTeX plugin][katex-plugin]: $a^2 + b^2 = c^2$
 
+You can even [link files for download](hello_world.txt)
+
 ![gatsby](./gatsby-astronaut.png)
 Check out the [Gatsby docs][gatsby-docs] for more info on how to get the most out of Gatsby.
 
