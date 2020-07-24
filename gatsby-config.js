@@ -37,6 +37,12 @@ module.exports = {
               maxWidth: 970,
             },
           },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `warn`,
+            }
+          },
           `gatsby-remark-prismjs`,
         ],
       },

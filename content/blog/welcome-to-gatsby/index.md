@@ -15,7 +15,10 @@ There's support for code snippets:
 console.log('Hello, World!')
 ```
 
+And also LaTeX functions using the [KaTeX plugin][katex-plugin]: $a^2 + b^2 = c^2$
+
 ![gatsby](./gatsby-astronaut.png)
 Check out the [Gatsby docs][gatsby-docs] for more info on how to get the most out of Gatsby.
 
 [gatsby-docs]: https://www.gatsbyjs.org/docs/
+[katex-plugin]: https://www.gatsbyjs.org/packages/gatsby-remark-katex/

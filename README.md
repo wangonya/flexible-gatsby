@@ -49,3 +49,8 @@ Inspired by [flexible-jekyll](https://github.com/artemsheludko/flexible-jekyll).
     Edit `gatsby.config.js` to update site metadata.
 
     Add blog posts in markdown in `content/blog`. Example blog posts have been provided.
+    
+## Contributors
+
+Much thanks to these contributors for making this project awesome:
+- [@sparky005](https://github.com/sparky005)
