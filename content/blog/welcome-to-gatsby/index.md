@@ -13,6 +13,7 @@ There's support for code snippets:
 
 ```javascript
 console.log('Hello, World!')
+console.log('This longer line should break the width on mobile devices.')
 ```
 
 And also LaTeX functions using the [KaTeX plugin][katex-plugin]: $a^2 + b^2 = c^2$
