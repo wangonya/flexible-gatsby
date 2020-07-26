@@ -49,7 +49,7 @@ blockquote {
 pre {
   padding: 1rem 2rem;
   overflow: auto;
-  white-space: pre-wrap;
+  white-space: pre-wrap !important; // override prism.css to fix width breaking on smaller screens
   word-wrap: break-word;
   word-break: break-all;
 
@@ -58,7 +58,7 @@ pre {
     padding-right: 0;
     padding-left: 0;
     overflow: auto;
-    white-space: pre-wrap;
+    white-space: pre-wrap !important; // override prism.css to fix width breaking on smaller screens
     word-wrap: break-word;
     word-break: break-all;
   }
