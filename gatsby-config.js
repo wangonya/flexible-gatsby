@@ -43,6 +43,13 @@ module.exports = {
               strict: `warn`,
             }
           },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `files`,
+              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+            },
+          },
           `gatsby-remark-prismjs`,
         ],
       },
