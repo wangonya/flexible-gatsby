@@ -13,6 +13,7 @@ There's support for code snippets:
 
 ```javascript
 console.log('Hello, World!')
+console.log('Really long code lines are also responsive on smaller screens just like the rest of the text.') 
 ```
 
 And also LaTeX functions using the [KaTeX plugin][katex-plugin]: $a^2 + b^2 = c^2$
