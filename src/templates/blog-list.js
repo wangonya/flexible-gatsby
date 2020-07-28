@@ -21,35 +21,37 @@ class BlogIndex extends React.Component {
           title={siteTitle}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        {posts.map(({ node }) => {
-          return (
-            <article className="post" key={node.fields.slug}>
-              {node.frontmatter.img &&
-                node.frontmatter.img.childImageSharp &&
-                node.frontmatter.img.childImageSharp.fluid && (
-                  <Link
-                    to={node.fields.slug}
-                    className="post-thumbnail"
-                    style={{
-                      backgroundImage: `url(${node.frontmatter.img.childImageSharp.fluid.src})`,
-                    }}
-                  />
-                )}
-              <div className="post-content">
-                <h2 className="post-title">
-                  <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-                </h2>
-                <p>{node.excerpt}</p>
-                <span className="post-date">
-                  {node.frontmatter.date}&nbsp;&nbsp;—&nbsp;
-                </span>
-                <span className="post-words">
-                  {node.timeToRead} minute read
-                </span>
-              </div>
-            </article>
-          )
-        })}
+        <div className="content-box clearfix">
+          {posts.map(({ node }) => {
+            return (
+              <article className="post" key={node.fields.slug}>
+                {node.frontmatter.img &&
+                  node.frontmatter.img.childImageSharp &&
+                  node.frontmatter.img.childImageSharp.fluid && (
+                    <Link
+                      to={node.fields.slug}
+                      className="post-thumbnail"
+                      style={{
+                        backgroundImage: `url(${node.frontmatter.img.childImageSharp.fluid.src})`,
+                      }}
+                    />
+                  )}
+                <div className="post-content">
+                  <h2 className="post-title">
+                    <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                  </h2>
+                  <p>{node.excerpt}</p>
+                  <span className="post-date">
+                    {node.frontmatter.date}&nbsp;&nbsp;—&nbsp;
+                  </span>
+                  <span className="post-words">
+                    {node.timeToRead} minute read
+                  </span>
+                </div>
+              </article>
+            )
+          })}
+        </div>
 
         <div className="container">
           <nav className="pagination" role="pagination">
