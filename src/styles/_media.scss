@@ -59,6 +59,10 @@
     align-items: stretch;
   }
 
+  .post-content-box {
+    padding: 20px 10px;
+  }
+
 .contact-title, .copyright {
   display: none;
 }
@@ -70,6 +74,11 @@
   .content-box {
     padding: 10px;
   }
+
+  .post-content-box {
+    padding: 10px;
+  }
+
   .post {
     width: 98%;
     max-width: 100%;
