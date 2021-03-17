@@ -1,17 +1,16 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { kebabCase } from 'lodash';
-import Img from 'gatsby-image'
+import { kebabCase } from 'lodash'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import DefaultLayout from '../components/layout'
 import SEO from '../components/seo'
 
-import "katex/dist/katex.min.css"
+import 'katex/dist/katex.min.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const { previous, next } = this.props.pageContext
 
     return (
       <DefaultLayout>
@@ -22,10 +21,15 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.img && (
                 <div className="page-cover-image">
                   <figure>
-                    <Img
+                    <GatsbyImage
+                      image={
+                        post.frontmatter.img.childImageSharp.gatsbyImageData
+                      }
                       className="page-image"
-                      key={post.frontmatter.img.childImageSharp.fluid.src}
-                      fluid={post.frontmatter.img.childImageSharp.fluid}
+                      key={
+                        post.frontmatter.img.childImageSharp.gatsbyImageData.src
+                      }
+                      alt=""
                     />
                   </figure>
                 </div>
@@ -41,11 +45,13 @@ class BlogPostTemplate extends React.Component {
                 <div className="page-footer">
                   <div className="page-tag">
                     {post.frontmatter.tags &&
-                    post.frontmatter.tags.map(tag => (
-                      <span key={tag}>
-                        <Link  className="tag" to={`/tags/${kebabCase(tag)}/`}># {tag}</Link>
-                      </span>
-                    ))}
+                      post.frontmatter.tags.map((tag) => (
+                        <span key={tag}>
+                          <Link className="tag" to={`/tags/${kebabCase(tag)}/`}>
+                            # {tag}
+                          </Link>
+                        </span>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -77,13 +83,7 @@ export const pageQuery = graphql`
         tags
         img {
           childImageSharp {
-            fluid(maxWidth: 3720) {
-              aspectRatio
-              base64
-              sizes
-              src
-              srcSet
-            }
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           }
         }
       }

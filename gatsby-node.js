@@ -9,37 +9,30 @@ exports.createPages = ({ graphql, actions }) => {
   const tagTemplate = path.resolve(`./src/templates/tags.js`)
 
   return graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                tags
-                img {
-                  childImageSharp {
-                    fluid(maxWidth: 3720) {
-                      aspectRatio
-                      base64
-                      sizes
-                      src
-                      srcSet
-                    }
-                  }
-                }
-              }
+    `{
+  allMarkdownRemark(
+    sort: {fields: [frontmatter___date], order: DESC}
+    limit: 1000
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          tags
+          img {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
             }
           }
         }
       }
-    `
+    }
+  }
+}
+`
   ).then(result => {
     if (result.errors) {
       throw result.errors
@@ -101,7 +94,7 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-  })
+  });
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

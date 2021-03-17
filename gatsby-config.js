@@ -54,8 +54,9 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     // uncomment this and input the trackingId to enable google analytics
     // {
     // resolve: `gatsby-plugin-google-analytics`,

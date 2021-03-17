@@ -27,12 +27,12 @@ class BlogIndex extends React.Component {
               <article className="post" key={node.fields.slug}>
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&
-                  node.frontmatter.img.childImageSharp.fluid && (
+                  node.frontmatter.img.childImageSharp.gatsbyImageData && (
                     <Link
                       to={node.fields.slug}
                       className="post-thumbnail"
                       style={{
-                        backgroundImage: `url(${node.frontmatter.img.childImageSharp.fluid.src})`,
+                        backgroundImage: `url(${node.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src})`,
                       }}
                     />
                   )}
@@ -109,13 +109,7 @@ export const pageQuery = graphql`
             title
             img {
               childImageSharp {
-                fluid(maxWidth: 3720) {
-                  aspectRatio
-                  base64
-                  sizes
-                  src
-                  srcSet
-                }
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
               }
             }
           }
