@@ -1,9 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
   Flexible Gatsby
 </h1>
@@ -49,8 +43,9 @@ Inspired by [flexible-jekyll](https://github.com/artemsheludko/flexible-jekyll).
     Edit `gatsby.config.js` to update site metadata.
 
     Add blog posts in markdown in `content/blog`. Example blog posts have been provided.
-    
+
 ## Contributors
 
 Much thanks to these contributors for making this project awesome:
-- [@sparky005](https://github.com/sparky005)
+
+-   [@sparky005](https://github.com/sparky005)
