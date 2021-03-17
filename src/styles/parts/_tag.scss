@@ -12,6 +12,16 @@
     color: $dark-blue;
     margin: 10px 0;
   }
+  span {
+    a {
+      text-decoration: none;
+      color: $dark-blue;
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+    }
+  }
 }
 
 .tags {
@@ -28,7 +38,7 @@
       padding: 5px 10px;
       border: 1px solid $gray;
       background-color: $lightgray;
-      transition: all .3s;
+      transition: all 0.3s;
       &:hover {
         background-color: $gray;
       }
@@ -43,7 +53,7 @@
       color: $dark-blue;
       &:hover {
         text-decoration: underline;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }
@@ -56,20 +66,7 @@
       color: $dark-blue;
       &:hover {
         text-decoration: underline;
-        opacity: .8;
-      }
-    }
-  }
-}
-
-.blog-tags {
-  span {
-    a {
-      text-decoration: none;
-      color: $dark-blue;
-      &:hover {
-        text-decoration: underline;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }

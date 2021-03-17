@@ -41,7 +41,7 @@ module.exports = {
             resolve: `gatsby-remark-katex`,
             options: {
               strict: `warn`,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
@@ -54,14 +54,16 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+    `gatsby-transformer-sharp`,
+    // uncomment this and input the trackingId to enable google analytics
+    // {
+    // resolve: `gatsby-plugin-google-analytics`,
+    // options: {
+    // trackingId: `ADD YOUR TRACKING ID HERE`,
+    // },
+    // },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
