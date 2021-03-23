@@ -109,7 +109,7 @@ export const pageQuery = graphql`
             title
             img {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, formats: [AUTO, AVIF, WEBP])
               }
             }
           }
