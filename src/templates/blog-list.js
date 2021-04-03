@@ -51,32 +51,31 @@ class BlogIndex extends React.Component {
               </article>
             )
           })}
-        </div>
-
-        <div className="container">
-          <nav className="pagination" role="pagination">
-            <ul>
-              {!isFirst && (
+          <div className="container">
+            <nav className="pagination" role="pagination">
+              <ul>
+                {!isFirst && (
+                  <p>
+                    <Link to={prevPage} rel="prev" className="newer-posts">
+                      ← Previous Page
+                    </Link>
+                  </p>
+                )}
                 <p>
-                  <Link to={prevPage} rel="prev" className="newer-posts">
-                    ← Previous Page
-                  </Link>
+                  <span className="page-number">
+                    Page {currentPage} of {numPages}
+                  </span>
                 </p>
-              )}
-              <p>
-                <span className="page-number">
-                  Page {currentPage} of {numPages}
-                </span>
-              </p>
-              {!isLast && (
-                <p>
-                  <Link to={nextPage} rel="next" className="older-posts">
-                    Next Page →
-                  </Link>
-                </p>
-              )}
-            </ul>
-          </nav>
+                {!isLast && (
+                  <p>
+                    <Link to={nextPage} rel="next" className="older-posts">
+                      Next Page →
+                    </Link>
+                  </p>
+                )}
+              </ul>
+            </nav>
+          </div>
         </div>
       </DefaultLayout>
     )

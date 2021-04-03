@@ -48,4 +48,5 @@ Inspired by [flexible-jekyll](https://github.com/artemsheludko/flexible-jekyll).
 
 Much thanks to these contributors for making this project awesome:
 
+-   [@scottelundgren](https://github.com/scottelundgren)
 -   [@sparky005](https://github.com/sparky005)
