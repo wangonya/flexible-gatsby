@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import DefaultLayout from '../components/layout'
 import SEO from '../components/seo'
@@ -31,10 +32,18 @@ class BlogIndex extends React.Component {
                     <Link
                       to={node.fields.slug}
                       className="post-thumbnail"
-                      style={{
-                        backgroundImage: `url(${node.frontmatter.img.childImageSharp.gatsbyImageData.images.fallback.src})`,
-                      }}
-                    />
+                    >
+                      <GatsbyImage
+                        image={
+                          node.frontmatter.img.childImageSharp.gatsbyImageData
+                        }
+                        className="page-image"
+                        key={
+                          node.frontmatter.img.childImageSharp.gatsbyImageData.src
+                        }
+                        alt=""
+                      />
+                    </Link>
                   )}
                 <div className="post-content">
                   <h2 className="post-title">
