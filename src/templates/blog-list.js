@@ -13,8 +13,8 @@ class BlogIndex extends React.Component {
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? '/' : (currentPage - 1).toString()
-    const nextPage = (currentPage + 1).toString()
+    const prevPage = currentPage - 1 === 1 ? '/' : `../${currentPage - 1}`
+    const nextPage = `../${currentPage + 1}`
 
     return (
       <DefaultLayout>
@@ -29,17 +29,15 @@ class BlogIndex extends React.Component {
                 {node.frontmatter.img &&
                   node.frontmatter.img.childImageSharp &&
                   node.frontmatter.img.childImageSharp.gatsbyImageData && (
-                    <Link
-                      to={node.fields.slug}
-                      className="post-thumbnail"
-                    >
+                    <Link to={node.fields.slug} className="post-thumbnail">
                       <GatsbyImage
                         image={
                           node.frontmatter.img.childImageSharp.gatsbyImageData
                         }
                         className="page-image"
                         key={
-                          node.frontmatter.img.childImageSharp.gatsbyImageData.src
+                          node.frontmatter.img.childImageSharp.gatsbyImageData
+                            .src
                         }
                         alt=""
                       />
@@ -117,7 +115,11 @@ export const pageQuery = graphql`
             title
             img {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, formats: [AUTO, AVIF, WEBP])
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  layout: FULL_WIDTH
+                  formats: [AUTO, AVIF, WEBP]
+                )
               }
             }
           }
