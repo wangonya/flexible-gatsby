@@ -8,7 +8,7 @@
     "url": "https://github.com/wangonya/flexible-gatsby/issues"
   },
   "dependencies": {
-    "gatsby": "^4.7.1",
+    "gatsby": "^4.23.0",
     "gatsby-plugin-google-analytics": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
     "gatsby-plugin-manifest": "^4.7.0",
