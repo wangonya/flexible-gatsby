@@ -17,7 +17,7 @@
     "gatsby-plugin-sass": "^5.7.0",
     "gatsby-plugin-sharp": "^4.23.0",
     "gatsby-remark-copy-linked-files": "^5.7.0",
-    "gatsby-remark-images": "^6.7.0",
+    "gatsby-remark-images": "^6.25.0",
     "gatsby-remark-katex": "^6.7.0",
     "gatsby-remark-prismjs": "^6.7.0",
     "gatsby-source-filesystem": "^4.7.0",
