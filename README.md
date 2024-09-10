@@ -51,3 +51,4 @@ Much thanks to these contributors for making this project awesome:
 -   [@scottelundgren](https://github.com/scottelundgren)
 -   [@sparky005](https://github.com/sparky005)
 -   [@wozniaklukasz](https://github.com/wozniaklukasz)
+-   [@SMagic-L](https://github.com/SMagic-L)
