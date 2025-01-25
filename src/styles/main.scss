@@ -1,6 +1,7 @@
-@import 'normalize';
-@import 'syntax';
-@import 'variables';
+@use "sass:meta";
+@use 'normalize';
+@use 'syntax';
+@use 'variables';
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -12,7 +13,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: $body-color;
+  color: variables.$body-color;
   background-color: #fbfbfb;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -119,12 +120,12 @@ table tfoot td {
 
 ::-moz-selection {
   background: rgba(38, 57, 89, 0.8);
-  color: $white;
+  color: variables.$white;
 }
 
 ::selection {
   background: rgba(38, 57, 89, 0.8);
-  color: $white;
+  color: variables.$white;
 }
 
 .clearfix::before, .clearfix::after {
@@ -137,13 +138,13 @@ table tfoot td {
 }
 
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
-@import 'parts/home-page';
+@include meta.load-css('parts/home-page');
 
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
-@import 'parts/post-page';
+@include meta.load-css('parts/post-page');
 
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
-@import 'parts/tag';
+@include meta.load-css('parts/tag');
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
-@import 'media';
+@include meta.load-css('media');

@@ -1,3 +1,5 @@
+@use "../variables";
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: $white;
+  background-color: variables.$white;
 }
 .about {
   margin: 0 0 40px;
@@ -20,7 +22,7 @@
     margin: 0 auto 10px;
     border-radius: 100%;
     overflow: hidden;
-    background-color: $dark;
+    background-color: variables.$dark;
   }
   img {
     width: 100%;
@@ -38,7 +40,7 @@
     padding-bottom: 15px;
     font-size: 16px;
     text-transform: uppercase;
-    color: $dark;
+    color: variables.$dark;
     font-weight: 700;
     &::after {
       content: "";
@@ -50,7 +52,7 @@
       width: 7px;
       height: 7px;
       border-radius: 100%;
-      background-color: $body-color;
+      background-color: variables.$body-color;
     }
   }
   p {
@@ -70,7 +72,7 @@
 .contact {
   .contact-title {
     position: relative;
-    color: $dark;
+    color: variables.$dark;
     font-weight: 400;
     font-size: 12px;
     margin: 0 0 5px;
@@ -85,7 +87,7 @@
       position: absolute;
       top: 50%;
       left: 0;
-      background-color: $body-color;
+      background-color: variables.$body-color;
     }
     &::after {
       content: "";
@@ -96,7 +98,7 @@
       position: absolute;
       top: 50%;
       right: 0;
-      background-color: $body-color;
+      background-color: variables.$body-color;
     }
   }
   ul {
@@ -111,13 +113,13 @@
         margin-left: 0;
       }
       a {
-        color: $body-color;
+        color: variables.$body-color;
         display: block;
         padding: 5px;
         font-size: 18px;
         transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
         &:hover {
-          color: $dark;
+          color: variables.$dark;
           transform: scale(1.2);
         }
       }
@@ -172,7 +174,7 @@ footer {
       a {
         font-family: 'PT Serif', serif;
         text-decoration: none;
-        color: $dark-blue;
+        color: variables.$dark-blue;
       }
     }
     p {
@@ -184,7 +186,7 @@ footer {
 a.older-posts, a.newer-posts {
   font-size: 18px;
   display: inline-block;
-  color: $body-color;
+  color: variables.$body-color;
   transition: transform .2s;
 }
 
