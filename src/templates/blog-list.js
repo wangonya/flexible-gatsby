@@ -98,7 +98,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
+    allMarkdownRemark(
+      sort: {frontmatter: {date: DESC}}
+      limit: $limit
+      skip: $skip
+      filter: {frontmatter: {draft: {eq: false}}}
+    ) {
       edges {
         node {
           excerpt
