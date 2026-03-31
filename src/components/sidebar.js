@@ -26,6 +26,7 @@ const Sidebar = ({ siteMetadata }) => (
                 <a
                   href={`https://twitter.com/${siteMetadata.social.twitter}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-twitter" aria-hidden="true" />
                 </a>
@@ -36,6 +37,7 @@ const Sidebar = ({ siteMetadata }) => (
                 <a
                   href={`https://facebook.com/${siteMetadata.social.facebook}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-facebook" aria-hidden="true" />
                 </a>
@@ -46,6 +48,7 @@ const Sidebar = ({ siteMetadata }) => (
                 <a
                   href={`https://github.com/${siteMetadata.social.github}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-github" aria-hidden="true" />
                 </a>
@@ -56,6 +59,7 @@ const Sidebar = ({ siteMetadata }) => (
                 <a
                   href={`https://linkedin.com/in/${siteMetadata.social.linkedin}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-linkedin" aria-hidden="true" />
                 </a>
@@ -63,7 +67,7 @@ const Sidebar = ({ siteMetadata }) => (
             )}
             {siteMetadata.social.email && (
               <li>
-                <a href={`mailto:${siteMetadata.social.email}`} target="_blank">
+                <a href={`mailto:${siteMetadata.social.email}`} target="_blank" rel="noopener noreferrer">
                   <i className="fa fa-envelope-o" aria-hidden="true" />
                 </a>
               </li>
