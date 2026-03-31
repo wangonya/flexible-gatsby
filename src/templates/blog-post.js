@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
                       key={
                         post.frontmatter.img.childImageSharp.gatsbyImageData.src
                       }
-                      alt=""
+                      alt={post.frontmatter.title}
                     />
                   </figure>
                 </div>
