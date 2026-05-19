@@ -8,6 +8,7 @@
     "url": "https://github.com/wangonya/flexible-gatsby/issues"
   },
   "dependencies": {
+    "file-type": "file:vendor/file-type",
     "gatsby": "^5.16.0",
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
@@ -23,7 +24,7 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.0",
-    "katex": "^0.13.3",
+    "katex": "^0.16.47",
     "lodash": "^4.18.1",
     "sass": "^1.89.0",
     "prismjs": "^1.30.0",
@@ -33,9 +34,28 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "eslint": "^9.26.0",
-    "eslint-plugin-react": "^7.34.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
     "prettier": "^3.3.2"
+  },
+  "overrides": {
+    "@ardatan/relay-compiler": {
+      "immutable": "3.8.3"
+    },
+    "@parcel/reporter-dev-server": "2.16.4",
+    "file-type": "file:vendor/file-type",
+    "gatsby": {
+      "cookie": "0.7.2",
+      "path-to-regexp": "0.1.13",
+      "webpack": "5.106.2"
+    },
+    "katex": "$katex",
+    "lodash": "$lodash",
+    "postcss": "8.5.15",
+    "resolve-url-loader": "5.0.0",
+    "serialize-javascript": "7.0.5",
+    "tmp": "0.2.5",
+    "ws": "8.20.1"
   },
   "homepage": "https://github.com/wangonya/flexible-gatsby",
   "keywords": ["gatsby"],

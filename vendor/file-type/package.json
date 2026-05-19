@@ -1,0 +1,21 @@
+{
+  "name": "file-type",
+  "version": "21.3.4",
+  "private": true,
+  "description": "Compatibility wrapper for Gatsby packages that still use the file-type v16 API.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "index.cjs",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.cjs"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "file-type-modern": "npm:file-type@21.3.4"
+  }
+}
